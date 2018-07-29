@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title text-center>edit-recipe</ion-title>
+    <ion-title text-center>{{mode}} recipe</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -20,11 +20,11 @@
     <ion-item>
     <ion-label floating>Description</ion-label>
     <ion-textarea
-    fornControlName="description"></ion-textarea>
+    formControlName="description"></ion-textarea>
   </ion-item>
   <ion-item>
     <ion-label floating>Difficulty</ion-label>
-    <ion-select fornControlName="difficulty">
+    <ion-select formControlName="difficulty">
       <ion-option *ngFor="let option of selectOptions" [value]="option">{{option}}</ion-option>
     </ion-select> 
   </ion-item>
